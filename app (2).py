@@ -1,12 +1,15 @@
 
 import streamlit as st
+import pickle
+import pandas as pd
 
-import numpy as np
+# Load trained model
+with open("job_role_model(1).pkl", "rb") as f:
+    model = pickle.load(f)
 
-# Load Model
-model = joblib.load("job_role_model(1).pkl")
-encoder = joblib.load("label_encoder.pkl")
-
+# Load label encoders
+with open("label_encoder.pkl", "rb") as f:
+    label_encoders = pickle.load(f)
 st.title("💼 Job Role Prediction")
 st.write("Adjust the sliders to predict the suitable job role.")
 
