@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 
 # Load Model
-model = joblib.load("job_role_model.pkl")
+model = joblib.load("job_role_model(1).pkl")
 encoder = joblib.load("label_encoder.pkl")
 
 st.title("💼 Job Role Prediction")
